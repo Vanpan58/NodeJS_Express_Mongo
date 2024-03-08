@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/Vanpan58/NodeJS_Express_Mongo/issues"
   },
-  "homepage": "https://github.com/Vanpan58/NodeJS_Express_Mongo#readme"
+  "homepage": "https://github.com/Vanpan58/NodeJS_Express_Mongo#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
 }
