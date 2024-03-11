@@ -3,9 +3,9 @@ const Usuario = require('../models/usuario_model');
 const Joi = require('@hapi/joi');
 const ruta = express.Router();
 
-ruta.get('/', (req,res) => {
+/*ruta.get('/', (req,res) => {
     res.json('Respuesta a peticón GET de USUARIOS fucionando correctamente...');
-});
+});*/
 
 
 //Validaciones para el objeto usuario
