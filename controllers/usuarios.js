@@ -39,7 +39,7 @@ ruta.post('/', (req, res) => {
 
     const {error, value} = schema.validate({nombre: body.nombre, email: body.email});
     if(!error){
-        let resultado = crearUsuario(bosy);
+        let resultado = crearUsuario(body);
         
         resultado.then( user => {
             res.json({
