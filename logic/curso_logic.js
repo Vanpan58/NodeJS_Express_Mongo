@@ -9,7 +9,7 @@ async function crearCurso(body){
         alumnos    : body.alumnos,
         calificacion  : body.calificacion 
     });
-    return awaitcurso.save();
+    return await curso.save();
 }
 
 //Función asíncrona para actualizar cursos

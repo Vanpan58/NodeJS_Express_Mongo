@@ -65,9 +65,9 @@ ruta.delete('/:email', (req, res) => {
 });
 
 
-//Endpoint de tipo Get para el recurso usuarios. Lista todos los usuarios
+//Endpoint de tipo GET para el recurso usuarios. Lista todos los usuarios
 ruta.get('/',(req, res) => {
-    let resultado = listarUsuarioActivos();
+    let resultado = logic.listarUsuarioActivos();
     resultado.then(usuarios => {
         res.json(usuarios)
     }).catch(err => {
