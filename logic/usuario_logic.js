@@ -2,7 +2,6 @@ const Usuario = require('../models/usuario_model');
 const Joi = require('@hapi/joi');
 
 
-
 //Validaciones para el objeto usuario
 const schema = Joi.object({
     nombre: Joi.string()

@@ -1,6 +1,5 @@
 const Curso = require('../models/curso_model');
 
-
 //Función asíncrona para crear cursos
 async function crearCurso(body){
     let curso = new Curso({
@@ -17,7 +16,9 @@ async function actualizarCurso(id, body){
     let curso = await Curso.findByIdAndUpdate(id, {
         $set: {
             titulo: body.titulo,
-            descripcion: body. descripcion
+            descripcion: body. descripcion,
+            alumnos    : body.alumnos,
+            calificacion   : body.calificacion
         }
     }, {new: true});
     return curso;

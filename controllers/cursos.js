@@ -2,6 +2,16 @@ const express = require('express');
 const logic = require('../logic/curso_logic');
 const ruta = express.Router();
 
+//Endpoint de tipo GET para el recurso CURSOS
+ruta.get('/',(req, res) => {
+    let resultado = logic.listarCursosActivos();
+    resultado.then(cursos => {
+        res.json(cursos);
+    }).catch(err => {
+        res.status(400).json(err);
+    })
+});
+
 //Endpoint de tipo POST para el recurso CURSOS
 ruta.post('/', (req, res) => {
     let resultado = logic.crearCurso(req.body);
@@ -37,14 +47,5 @@ ruta.delete('/:id', (req, res) => {
     })
 })
 
-//Endpoint de tipo GET para el recurso CURSOS
-ruta.get('/', (req, res) => {
-    let resultado = logic.listarCursosActivos();
-    resultado.then(cursos => {
-        res.json(cursos);
-    }).catch(err => {
-        res.status(400).json(err);
-    })
-});
 
 module.exports = ruta;
